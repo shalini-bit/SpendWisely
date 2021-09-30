@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'loginscreen.dart';
+
 void main() => runApp(MaterialApp(
       home: HomePage(),
     ));
@@ -52,7 +54,10 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(50)),
               elevation: 0,
               height: 50,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => LoginScreen()));
+              },
               color: logoPurple,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -69,3 +74,5 @@ class _HomePageState extends State<HomePage> {
     ); // This trailing comma makes auto-formatting nicer for build methods;
   }
 }
+
+class _ {}
