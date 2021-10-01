@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
 import 'colors.dart';
-
-void main() => runApp(MaterialApp(
-      home: ProfilePage(),
-    ));
+import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -18,7 +15,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: grey.withOpacity(0.05),
+      backgroundColor: logoPurple.withOpacity(0.08),
       body: getBody(),
     );
   }
@@ -32,7 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Container(
             decoration: BoxDecoration(color: white, boxShadow: [
               BoxShadow(
-                color: grey.withOpacity(0.01),
+                color: logoPurple.withOpacity(0.01),
                 spreadRadius: 10,
                 blurRadius: 3,
                 // changes position of shadow
@@ -53,7 +50,6 @@ class _ProfilePageState extends State<ProfilePage> {
                             fontWeight: FontWeight.bold,
                             color: black),
                       ),
-                      //Icon(AntDesign.setting)
                     ],
                   ),
                   SizedBox(
@@ -67,30 +63,30 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Stack(
                             children: [
                               RotatedBox(
-                                  quarterTurns: -2,
-                                  child:
-                                      /**CircularPercentIndicator(
+                                quarterTurns: -2,
+                                child: CircularPercentIndicator(
                                     circularStrokeCap: CircularStrokeCap.round,
-                                    backgroundColor: grey.withOpacity(0.3),
+                                    backgroundColor:
+                                        logoPurple.withOpacity(0.3),
                                     radius: 110.0,
                                     lineWidth: 6.0,
                                     percent: 0.53,
-                                    progressColor: primary),
-                              ),*/
-                                      Positioned(
-                                    top: 16,
-                                    left: 13,
-                                    child: Container(
-                                      width: 85,
-                                      height: 85,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://images.unsplash.com/photo-1531256456869-ce942a665e80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI4fHxwcm9maWxlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                  ))
+                                    progressColor: primaryColor),
+                              ),
+                              Positioned(
+                                top: 16,
+                                left: 13,
+                                child: Container(
+                                  width: 85,
+                                  height: 85,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              "https://images.unsplash.com/photo-1531256456869-ce942a665e80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI4fHxwcm9maWxlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -128,11 +124,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: primary,
+                        color: primaryColor,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
                           BoxShadow(
-                            color: primary.withOpacity(0.01),
+                            color: primaryColor.withOpacity(0.01),
                             spreadRadius: 10,
                             blurRadius: 3,
                             // changes position of shadow
@@ -169,7 +165,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                border: Border.all(color: blue)),
+                                border: Border.all(color: white)),
                             child: Padding(
                               padding: const EdgeInsets.all(13.0),
                               child: Text(
@@ -199,7 +195,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 13,
-                      color: Color(0xff0f284b)),
+                      color: Color(0xff67727d)),
                 ),
                 TextField(
                   controller: _email,

@@ -3,6 +3,7 @@ import 'package:flutter_application_1/loginscreen.dart';
 import 'package:flutter_application_1/successfully.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_application_1/colors.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -10,10 +11,6 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  Color primaryColor = Color(0xff0f284b);
-  Color secondaryColor = Color(0xff232c51);
-  Color logoPurple = Color(0xff01579b);
-
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController emailController = TextEditingController();

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'loginscreen.dart';
+import 'package:flutter_application_1/colors.dart';
 
 void main() => runApp(MaterialApp(
       home: HomePage(),
@@ -11,10 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Color primaryColor = Color(0xff0f284b);
-  Color secondaryColor = Color(0xff232c51);
-  Color logoPurple = Color(0xff01579b);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

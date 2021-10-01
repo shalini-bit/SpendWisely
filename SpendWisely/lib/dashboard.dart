@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Timeline.dart';
+import 'package:flutter_application_1/budget_page.dart';
+import 'package:flutter_application_1/profile_page.dart';
+import 'package:flutter_application_1/stats_page.dart';
+import 'colors.dart';
 
 class DashboardApp extends StatefulWidget {
   @override
@@ -9,40 +14,64 @@ class _DashboardAppState extends State<DashboardApp> {
   int _currentIndex = 0;
 
   final tabs = [
-    Center(child: Text('Home')),
-    Center(child: Text('Sngb')),
-    Center(child: Text('dsjb')),
-    Center(child: Text('shdbf')),
+    Timeline(),
+    StatsPage(),
+    BudgetPage(),
+    ProfilePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    final Color primaryColor = Color(0xff0f284b);
     return Scaffold(
-      backgroundColor: primaryColor,
+      backgroundColor: logoPurple.withOpacity(0.08),
       body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: primaryColor,
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
         iconSize: 20,
         selectedFontSize: 10,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_wallet),
-              title: Text('Your Wallet'),
-              backgroundColor: Color(0xff01579b)),
+              icon: Icon(
+                Icons.article_outlined,
+                color: white,
+              ),
+              title: Text(
+                'Timeline',
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: white),
           BottomNavigationBarItem(
-              icon: Icon(Icons.equalizer_rounded),
-              title: Text('Stats'),
-              backgroundColor: Color(0xff01579b)),
+              icon: Icon(
+                Icons.equalizer_rounded,
+                color: white,
+              ),
+              title: Text(
+                'Stats',
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: white),
           BottomNavigationBarItem(
-              icon: Icon(Icons.savings_outlined),
-              title: Text('Savings'),
-              backgroundColor: Color(0xff01579b)),
+              icon: Icon(
+                Icons.account_balance_wallet,
+                color: white,
+              ),
+              title: Text(
+                'Your Budget',
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: white),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text('Profile'),
-              backgroundColor: Color(0xff01579b)),
+              icon: Icon(
+                Icons.person,
+                color: white,
+              ),
+              title: Text(
+                'Profile',
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: white),
         ],
         onTap: (index) {
           setState(() {
