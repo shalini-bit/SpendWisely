@@ -3,16 +3,12 @@ import 'loginscreen.dart';
 import 'main.dart';
 import 'signup.dart';
 
-void main() => runApp(MaterialApp(
-      home: HomePage(),
-    ));
-
-class HomePage extends StatefulWidget {
+class SuccessfulRegister extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _SuccessfulRegisterState createState() => _SuccessfulRegisterState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SuccessfulRegisterState extends State<SuccessfulRegister> {
   Color primaryColor = Color(0xff0f284b);
   Color secondaryColor = Color(0xff232c51);
   Color logoPurple = Color(0xff01579b);
@@ -27,15 +23,15 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              'assets/SpendWizely.png',
-              height: 250,
+              'assets/Tickmark.png',
+              height: 200,
             ),
             SizedBox(
               height: 20,
             ),
             //Texts and Styling of them
             Text(
-              'Horray, You are successfully registered',
+              'Hurray!!, You are successfully registered',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white, fontSize: 28),
             ),

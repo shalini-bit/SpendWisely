@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/loginscreen.dart';
+import 'package:flutter_application_1/successfully.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -67,7 +68,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   elevation: 0,
                   minWidth: double.maxFinite,
                   height: 50,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => SuccessfulRegister()));
+                  },
                   color: logoPurple,
                   child: Text('Sign up',
                       style: TextStyle(color: Colors.white, fontSize: 16)),
