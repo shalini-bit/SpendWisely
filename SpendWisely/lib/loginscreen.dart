@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_application_1/dashboard.dart';
 
 // ignore: use_key_in_widget_constructors
 class LoginScreen extends StatelessWidget {
   final Color primaryColor = Color(0xff0f284b);
   final Color secondaryColor = Color(0xff232c51);
 
-  final Color logoPurple = Color(0xff6a1b9a);
+  final Color logoPurple = Color(0xff01579b);
 
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -56,7 +57,10 @@ class LoginScreen extends StatelessWidget {
                   elevation: 0,
                   minWidth: double.maxFinite,
                   height: 50,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => DashboardApp()));
+                  },
                   color: logoPurple,
                   child: Text('Sign-in',
                       style: TextStyle(color: Colors.white, fontSize: 16)),

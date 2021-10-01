@@ -11,7 +11,7 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   Color primaryColor = Color(0xff0f284b);
   Color secondaryColor = Color(0xff232c51);
-  Color logoPurple = Color(0xff6a1b9a);
+  Color logoPurple = Color(0xff01579b);
 
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
