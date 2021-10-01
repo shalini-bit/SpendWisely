@@ -9,3 +9,4 @@ const Color blue = Color(0xff2962ff);
 Color primaryColor = Color(0xff0f284b);
 Color secondaryColor = Color(0xff232c51);
 Color logoPurple = Color(0xff01579b);
+Color Tealss = Color(0xffeceff1);

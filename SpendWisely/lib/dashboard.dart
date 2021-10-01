@@ -23,7 +23,7 @@ class _DashboardAppState extends State<DashboardApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: logoPurple.withOpacity(0.08),
+      backgroundColor: Tealss,
       body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: primaryColor,

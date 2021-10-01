@@ -125,7 +125,7 @@ class _TimelineState extends State<Timeline> {
                               height: 50,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: primaryColor.withOpacity(0.1),
+                                color: Tealss,
                               ),
                               child: Center(
                                 child: Image.asset(

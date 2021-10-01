@@ -1,3 +1,4 @@
+import 'package:flutter_application_1/loginscreen.dart';
 import 'colors.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -241,6 +242,22 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontSize: 17, fontWeight: FontWeight.bold, color: black),
                   decoration: InputDecoration(
                       hintText: "Password", border: InputBorder.none),
+                ),
+                SizedBox(height: 50),
+                MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50)),
+                  elevation: 0,
+                  minWidth: double.maxFinite,
+                  height: 50,
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => LoginScreen()));
+                  },
+                  color: blue,
+                  child: Text('Log-out',
+                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                  textColor: Colors.white,
                 ),
               ],
             ),
